@@ -35,9 +35,14 @@ mkdir workdir eval
 
 
 ## Run Training
-To run DDPM++ VP-SDE 
+To run DDPM++ VP-SDE on CIFAR10
 ```shell
 python main.py --config ./configs/vp/cifar10_ddpmpp.py --eval_folder 'eval' --workdir "workdir" --mode "train"
+```
+
+Run on MNIST
+```shell
+python main.py --config ./configs/vp/mnist_ddpmpp.py --eval_folder 'eval' --workdir "workdir" --mode "train"
 ```
 
 

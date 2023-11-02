@@ -146,6 +146,7 @@ def get_dataset(config, uniform_dequantization=False, evaluation=False):
 
         def resize_op(img):
             img = tf.image.convert_image_dtype(img, tf.float32)
+            img = tf.image.grayscale_to_rgb(img)
             return tf.image.resize(img, [config.data.image_size, config.data.image_size], antialias=True)
 
     else:
